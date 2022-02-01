@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hashicorp</title>
+    <link rel="stylesheet" href="build/tailwind.css" />
+</head>
+
+<body class="min-h-screen">
+   <header>
+        <nav class="bg-white shadow-lg">
+            <div class="px-8 max-w-none">
+                <div class="flex justify-between">
+                    <div class="flex space-x-7">
+                        <div class="flex items-center px-2 py-4">
+                            <!-- Website Logo -->
+                            <a href="#">
+                                <img src="/assets/img/HashiCorp_PrimaryLogo_Black_RGB.svg" alt="Logo" class="w-32">
+                            </a>
+                        </div>
+                        <!-- Primary Navbar items -->
+                        <ul class="hidden space-x-4 lg:inline-block">
+                            <li class="inline-block px-2 py-4 group">
+                                Products
+                                <div class="inline-block ">
+                                    <span>
+                                        <svg class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                    <ul id="menu" aria-hidden="true" class="absolute transition duration-150 ease-in-out origin-top transform scale-0 bg-white border rounded-sm group-hover:scale-100 min-w-32">
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">Programming</li>
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">DevOps</li>
+                                        <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
+                                            <button aria-haspopup="true" aria-controls="menu-lang"
+                                                class="flex items-center w-full text-left outline-none focus:outline-none">
+                                                <span class="flex-1 pr-1">Langauges</span>
+                                                <span class="mr-auto">
+                                                    <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <ul id="menu-lang" aria-hidden="true" class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
+                                                <li class="px-3 py-1 hover:bg-gray-100">Javascript</li>
+                                                <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
+                                                    <button aria-haspopup="true" aria-controls="menu-lang-python"
+                                                        class="flex items-center w-full text-left outline-none focus:outline-none">
+                                                        <span class="flex-1 pr-1">Python</span>
+                                                        <span class="mr-auto">
+                                                            <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <ul id="menu-lang-python" aria-hidden="true" class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
+                                                        <li class="px-3 py-1 hover:bg-gray-100">2.7</li>
+                                                        <li class="px-3 py-1 hover:bg-gray-100">3+</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="px-3 py-1 hover:bg-gray-100">Go</li>
+                                                <li class="px-3 py-1 hover:bg-gray-100">Rust</li>
+                                            </ul>
+                                        </li>
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">Testing</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="inline-block px-2 py-4">
+                                Solutions
+                                <div class="inline-block ">
+                                    <span>
+                                        <svg class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                    <ul id="menu" aria-hidden="true"
+                                        class="absolute transition duration-150 ease-in-out origin-top transform scale-0 bg-white border rounded-sm group-hover:scale-100 min-w-32">
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">Programming</li>
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">DevOps</li>
+                                        <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
+                                            <button aria-haspopup="true" aria-controls="menu-lang"
+                                                class="flex items-center w-full text-left outline-none focus:outline-none">
+                                                <span class="flex-1 pr-1">Langauges</span>
+                                                <span class="mr-auto">
+                                                    <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <ul id="menu-lang" aria-hidden="true"
+                                                class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
+                                                <li class="px-3 py-1 hover:bg-gray-100">Javascript</li>
+                                                <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
+                                                    <button aria-haspopup="true" aria-controls="menu-lang-python"
+                                                        class="flex items-center w-full text-left outline-none focus:outline-none">
+                                                        <span class="flex-1 pr-1">Python</span>
+                                                        <span class="mr-auto">
+                                                            <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <ul id="menu-lang-python" aria-hidden="true"
+                                                        class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
+                                                        <li class="px-3 py-1 hover:bg-gray-100">2.7</li>
+                                                        <li class="px-3 py-1 hover:bg-gray-100">3+</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="px-3 py-1 hover:bg-gray-100">Go</li>
+                                                <li class="px-3 py-1 hover:bg-gray-100">Rust</li>
+                                            </ul>
+                                        </li>
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">Testing</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="inline-block px-2 py-4">
+                                Company
+                                <div class="inline-block ">
+                                    <span>
+                                        <svg class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                    <ul id="menu" aria-hidden="true"
+                                        class="absolute transition duration-150 ease-in-out origin-top transform scale-0 bg-white border rounded-sm group-hover:scale-100 min-w-32">
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">Programming</li>
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">DevOps</li>
+                                        <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
+                                            <button aria-haspopup="true" aria-controls="menu-lang"
+                                                class="flex items-center w-full text-left outline-none focus:outline-none">
+                                                <span class="flex-1 pr-1">Langauges</span>
+                                                <span class="mr-auto">
+                                                    <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <ul id="menu-lang" aria-hidden="true"
+                                                class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
+                                                <li class="px-3 py-1 hover:bg-gray-100">Javascript</li>
+                                                <li class="relative px-3 py-1 rounded-sm hover:bg-gray-100">
+                                                    <button aria-haspopup="true" aria-controls="menu-lang-python"
+                                                        class="flex items-center w-full text-left outline-none focus:outline-none">
+                                                        <span class="flex-1 pr-1">Python</span>
+                                                        <span class="mr-auto">
+                                                            <svg class="w-4 h-4 transition duration-150 ease-in-out fill-current"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <ul id="menu-lang-python" aria-hidden="true"
+                                                        class="absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left bg-white border rounded-sm min-w-32 ">
+                                                        <li class="px-3 py-1 hover:bg-gray-100">2.7</li>
+                                                        <li class="px-3 py-1 hover:bg-gray-100">3+</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="px-3 py-1 hover:bg-gray-100">Go</li>
+                                                <li class="px-3 py-1 hover:bg-gray-100">Rust</li>
+                                            </ul>
+                                        </li>
+                                        <li class="px-3 py-1 rounded-sm hover:bg-gray-100">Testing</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="inline-block px-2 py-4">Partners</li>
+                            <li class="inline-block px-2 py-4">Events</li>
+                        </ul>
+                    </div>
+                    <!-- Secondary Navbar items -->
+                    <div class="items-center hidden space-x-3 md:flex">
+                        <ul>
+                            <li class="inline-block px-2 py-4">Resources</li>
+                            <li class="inline-block px-2 py-4 ml-5">Success and Support</li>
+                            <button class="px-4 py-2 border border-gray-400">Contact sales</button>
+                        </ul>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <div class="flex items-center md:hidden">
+                        <button class="outline-none mobile-menu-button">
+                            <svg class="w-6 h-6 text-gray-500 hover:text-green-500" x-show="!showMenu" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu -->
+            <div class="hidden mobile-menu">
+                <ul class="">
+                    <li class="active"><a href="index.html"
+                            class="block px-2 py-4 text-sm font-semibold text-white bg-green-500">Home</a></li>
+                    <li><a href="#services"
+                            class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">Services</a></li>
+                    <li><a href="#about" class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">About</a>
+                    </li>
+                    <li><a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </nav>
+   </header>
+
+<div class="h-full">
+    <div class="relative bg-black h-4/5">
+        <div class="relative overflow-hidden ">
+            <video poster="https://www.datocms-assets.com/2885/1638986158-foo-001.jpeg?fm=webp&amp;q=55"
+                class="relative mx-auto max-w-7xl left-16" muted autoplay playsinline loop>
+                <source src="https://www.datocms-assets.com/2885/1638982071-output.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="absolute top-0 bottom-0 grid items-center content justify-evenly content-evenly">
+        <div class="items-center block h-full mx-20 px-44">
+            <h1 class="text-5xl tracking-wide text-white">Unlocking the cloud <br>operating model <br><span class="gradient-text">for everyone</span>
+            </h1>
+            <div class="mt-8">
+                <a href="">
+                    <button class="px-5 py-3 text-white bg-blue-500 hover:bg-blue-600">Read More</button>
+                </a>
+            </div>
+        </div>
+        
+     </div>
+</div>
+
+<section class="bg-gray-100">
+    <div class="mx-auto max-w-7xl">
+        <div class="relative grid grid-cols-3 mt-0 bg-white">
+            <a href="" class="p-6 leading-loose transition duration-300 ease-in-out transform group group-hover:p-8 hover:-mt-2 hover:bg-blue-700 hover:z-50 hover:scale-100 group-hover:shadow-md">
+                <div class="group-hover:text-white">
+                    <p class="text-xs text-gray-400 group-hover:text-gray-200">SURVEY RESULTS</p>
+                    <p class="mt-3 text-lg font-medium ">HashiCorp State of Cloud Strategy Survey</p>
+                    <p class="mt-4 text-blue-600 group-hover:text-white">Explore Now</p>
+                </div>
+            </a>
+            <a href="" class="p-6 leading-loose transition duration-300 ease-in-out transform group group-hover:p-8 hover:-mt-2 hover:bg-blue-700 hover:z-50 hover:scale-100 ">
+                <div class="group-hover:text-white">
+                    <p class="text-xs text-gray-400">WHITEPAPER</p>
+                    <p class="mt-3 text-lg font-medium ">Zero Trust Security. Authenticate & Authorize Everythingy</p>
+                    <p class="mt-4 text-blue-600 group-hover:text-white">Learn More</p>
+                </div>
+            </a>
+            <a href="" class="p-6 leading-loose transition duration-300 ease-in-out transform group hover:-mt-2 group-hover:p-8 hover:bg-blue-700 hover:z-50 hover:scale-100 ">
+                <div class="group-hover:text-white">
+                    <p class="text-xs text-gray-400">WEBINAR</p>
+                    <p class="mt-3 text-lg font-medium ">Announcing Terraform 1.1 with Improved Refactoring Capabilities and Enhanced Cloud Experience</p>
+                    <p class="mt-4 text-blue-600 group-hover:text-white">Register Now</p>
+                </div>
+            </a>
+        </div>
+    </div>   
+
+    <div class="py-16">
+        <div class="max-w-screen-xl mx-auto">
+            <ul class="flex items-center justify-between">
+                <li class="flex items-center justify-center md:w-auto">
+                    <img src="/img/adobe-black.svg" alt="Adobe">
+                </li>
+                <li class="md:w-auto">
+                    <img src="/img/barclays-black.svg" alt="Barclay">
+                </li>
+                <li class="md:w-auto">
+                    <img src="/img/pandora-black.svg" alt="Pandora">
+                </li>
+                <li class="md:w-auto">
+                    <img src="/img/hulu-black.svg" alt="Hulu">
+                </li>
+                <li class="md:w-auto">
+                    <img src="/img/sap-ariba-black.svg" alt="SAP">
+                </li>
+                <li class="md:w-auto">
+                    <img src="/img/progressive-black.svg" alt="Progressive">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="pt-32 mx-40">
+    <div class="max-w-screen-md m-auto text-center">
+        <h2 class="max-w-screen-sm m-auto text-4xl font-medium">Unlocking the cloud operating model for enterprises</h2>
+        <p class="mt-8 text-xl font-extralight">Enabling the world's largest companies to deliver applications faster by helping transition from manual processes and
+        ITIL practices to self-service automation and DevOps practices.</p>
+        <div class="mt-6 mb-16">
+            <a href="" class="text-blue-600">Learn More <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div class="max-w-screen-xl m-auto">
+        <div class="grid grid-cols-2 gap-9">
+            <div class="max-w-md mx-auto overflow-hidden bg-gray-200 md:max-w-2xl">
+                <div class="flex p-8">
+                    <div class="w-1/4">
+                        <img class="w-3/4" src="/img/home-solution-terraform.svg" alt="Man looking at item at a store">
+                    </div>
+                    <div class="pl-2">
+                        <h4 class="text-3xl font-extralight trackng-widest ">
+                            <strong>Infrastructure</strong> automation
+                        </h4>
+                        <p class="mt-3 leading-relaxed text-gray-500">
+                            Automate provisioning, compliance and management of cloud infrastructure using a common workflow.
+                        </p>
+                        <div class="mt-4">
+                            <a href="" class="text-blue-600">Explore Terraform <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="max-w-md mx-auto overflow-hidden bg-gray-200 md:max-w-2xl">
+                <div class="flex p-8">
+                    <div class="w-1/4">
+                        <img class="w-3/4" src="/img/home-solution-vault.svg" alt="Man looking at item at a store">
+                    </div>
+                    <div class="pl-2">
+                        <h4 class="text-3xl font-extralight trackng-widest ">
+                            <strong>Security</strong> automation
+                        </h4>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                            Manage secrets and protect sensitive data based on user and workload identity.
+                        </p>
+                        <div class="mt-4">
+                            <a href="" class="text-blue-600">Explore Vault <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-md mx-auto overflow-hidden bg-gray-200 md:max-w-2xl">
+                <div class="flex p-8">
+                    <div class="w-1/4">
+                        <img class="w-3/4" src="/img/home-solution-consul.svg" alt="Man looking at item at a store">
+                    </div>
+                    <div class="pl-2">
+                        <h4 class="text-3xl font-extralight trackng-widest ">
+                            <strong>Network</strong> automation
+                        </h4>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                            Accelerate application delivery by automating the network, including physical devices, virtual
+                            appliances, and
+                            distributed service mesh.
+                        </p>
+                        <div class="mt-4">
+                            <a href="" class="text-blue-600">Explore Consul <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-md mx-auto overflow-hidden bg-gray-200 md:max-w-2xl">
+                <div class="flex p-8">
+                    <div class="w-1/4">
+                        <img class="w-3/4" src="/img/home-solution-nomad.svg" alt="Man looking at item at a store">
+                    </div>
+                    <div class="pl-2">
+                        <h4 class="text-3xl font-extralight trackng-widest ">
+                            <strong>Application</strong> automation
+                        </h4>
+                        <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                            Orchestrate workloads and schedule jobs for any containerized, legacy, or batch application.
+                        </p>
+                        <div class="mt-4">
+                            <a href="" class="text-blue-600">Explore Nomad <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-8">
+    <div class="max-w-screen-xl pt-6 mx-auto">
+        <div class="max-w-screen-md mx-auto text-center">
+            <h6 class="text-4xl">Our Partner</h6>
+            <p class="mt-8 text-xl">
+                HashiCorp partners with the world’s top technology and solutions vendors, making it easier for organizations to
+                provision, secure, connect, and run their applications in any environment.
+            </p>
+            
+            <div class="mt-8">
+                <a href="">
+                    <button class="px-5 py-3 text-white bg-blue-500 hover:bg-blue-600">Find a partner</button>
+                </a>
+            </div>
+
+            <h6 class="mt-10 text-4xl">Featured Partners</h6>
+
+            <div class="grid grid-cols-3 gap-4 mx-auto mt-12">
+                <a href="" class="transition duration-300 ease-in-out border border-gray-300 group group-hover:shadow-xl group-hover:px-4">
+                    <div class="flex flex-col items-center justify-center h-48">
+                        <span class="m-auto">
+                            <img src="img/microsoft.svg" alt="Microsoft" />
+                        </span>
+                        <span class="flex items-center justify-center w-full h-10 bg-gray-200 border-t-0 border-gray-300">
+                            <p class="">Download whitepaper</p>
+                        </span>
+                    </div>
+                </a>
+                <a  href="" class="transition duration-300 ease-in-out border border-gray-300 group group-hover:shadow-xl group-hover:px-4">
+                    <div class="flex flex-col items-center justify-center h-48">
+                        <span class="m-auto">
+                            <img src="img/aws.svg" alt="Microsoft" />
+                        </span>
+                        <span class="flex items-center justify-center w-full h-10 bg-gray-200 border-t-0 border-gray-300">
+                            <p class="">Download whitepaper</p>
+                        </span>
+                    </div>
+                </a>
+                <a  href="" class="transition duration-300 ease-in-out border border-gray-300 group group-hover:shadow-xl group-hover:px-4">
+                    <div class="flex flex-col items-center justify-center h-48">
+                        <span class="m-auto">
+                            <img src="img/google.svg" alt="Microsoft" />
+                        </span>
+                        <span class="flex items-center justify-center w-full h-10 bg-gray-200 border-t-0 border-gray-300">
+                            <p class="">Download whitepaper</p>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+                        
+        </div>
+    </div>
+
+</section>
+
+</body>
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</html>
